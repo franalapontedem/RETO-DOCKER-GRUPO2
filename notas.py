@@ -23,3 +23,13 @@ media=round(media/len(alumnos),2)
 print(f"Hay {len(alumnos)} alumnos en total")
 print(f"Hay {aprobados} aprobados y {suspendidos} suspendidos")
 print(f"La media es: {media}")
+
+def calcular_media(alumnos):
+    media=0
+    if len(alumnos)==0:
+        return 0
+    else:
+        for alumno in alumnos:
+            media=media+alumno["nota"]
+    return media/len(alumnos)
+print(calcular_media(alumnos))
